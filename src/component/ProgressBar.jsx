@@ -10,7 +10,10 @@ export default function ProgressBar(props) {
     // If props.val is greater than or equal to 50, set text color to white, otherwise set it to black
     if (props.val >= 50) {
       setTextColor("white");
-    } else {
+    } else if(props.them === 'black'){
+        setTextColor('white');
+    }
+    else {
       setTextColor("black");
     }
   }, [props.val]);
